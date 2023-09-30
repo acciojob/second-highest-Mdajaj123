@@ -15,13 +15,13 @@
 			for(let i=2;i<arr.length;i++){
 			 let currentmax=a>b?a:b;
 			 let currentmin=a<b?a:b;
-			
+		
 				 if(currentmax>arr[i]){
 				 a=currentmin; 
 				 b=arr[i];
 				}
 			}
-			console.log(a>b?a:b);
+			return(a>b?a:b);
 			
 		}
 
