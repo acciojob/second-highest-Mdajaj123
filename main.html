@@ -11,17 +11,18 @@
 		function secondHighest(arr) {
 			
 			//Write your code here
-			let a=arr[0],b=arr[1];
-			for(let i=2;i<arr.length;i++){
-			 let currentmax=a>b?a:b;
-			 let currentmin=a<b?a:b;
-		
-				 if(currentmax>arr[i]){
-				 a=currentmin; 
-				 b=arr[i];
+			let max1=0;
+			let max2=0;
+			for(let i=0;i<arr.length;i++){
+				if(max1<arr[i]){
+					max2=max1;
+					max1=arr[i];
+				}
+				else if(arr[i]>max2 && max1>arr[i]){
+					max2=arr[i];
 				}
 			}
-			return(a>b?a:b);
+			return max2;
 			
 		}
 
