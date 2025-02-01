@@ -21,9 +21,13 @@
 				else if(arr[i]>max2 && max1>arr[i]){
 					max2=arr[i];
 				}
+				else if(arr.length==0 || arr.length==1){
+					return "infinity";
+				}
+			
 			}
 			return max2;
-			
+				
 		}
 
 		function Main() {
